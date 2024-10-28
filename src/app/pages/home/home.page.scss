@@ -1,0 +1,14 @@
+ion-card {
+    margin: 10px;
+    height: 100%;
+  }
+  
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 88px);
+  }
+  
+  ion-button {
+    margin-top: auto;
+  }

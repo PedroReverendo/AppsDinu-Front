@@ -1,0 +1,36 @@
+<app-header></app-header>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información Personal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          <h2><strong>Nombre:</strong> {{ usuario.nombre }}</h2>
+          <h2><strong>Apellido:</strong> {{ usuario.apellido }}</h2>
+          <h2><strong>Email:</strong> {{ usuario.email }}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mis Materias</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let materia of materias">
+          <ion-label>
+            <h2>{{ materia.nombreMateria }}</h2>
+            <p>{{ materia.descripcionMateria }}</p>
+            <p>{{ materia.fecha_inicio }}</p>
+            <p>{{ materia.fecha_fin }}</p>
+          </ion-label>
+          <ion-button slot="end" color="danger" fill="outline" (click)="confirmarBaja(materia.id)">Dar de baja</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
